@@ -10,6 +10,18 @@ namespace :dev do
       )
     end
     puts "Contatos cadastrados com sucesso!"
+
+    puts "Cadastrando tipos de contatos..."
+
+    kinds = ['Amigo', 'Comercial', 'Conhecido']
+
+    kinds.each do |kind|
+      Kind.create!(
+        description: kind
+      )
+    end
+
+    puts "Tipos de contatos cadastrados!"
   end
 
 end
